@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ответы на вопросы по физике</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .faq-container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .faq-item {
+            background: white;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 15px;
+            cursor: pointer;
+            background: #007bff;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            text-align: left;
+            width: 100%;
+            display: block;
+        }
+        .faq-answer {
+            display: none;
+            padding: 15px;
+            background: #f9f9f9;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="faq-container">
+        <div class="faq-item">
+            <button class="faq-question">Что такое закон всемирного тяготения?</button>
+            <div class="faq-answer">Закон всемирного тяготения гласит, что все тела во Вселенной притягиваются друг к другу с силой, прямо пропорциональной произведению их масс и обратно пропорциональной квадрату расстояния между ними.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Как определяется скорость тела в равномерном движении?</button>
+            <div class="faq-answer">Скорость тела в равномерном движении определяется по формуле v = s / t, где v - скорость, s - пройденное расстояние, t - время движения.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Что такое кинетическая энергия?</button>
+            <div class="faq-answer">Кинетическая энергия – это энергия, которой обладает тело за счет своего движения. Она определяется по формуле E_k = (m*v^2)/2.</div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>
